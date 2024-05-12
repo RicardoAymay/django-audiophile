@@ -1,11 +1,11 @@
 import React from 'react'
 import best from "../../../assets/shared/desktop/image-best-gear.jpg"
 import Image from 'next/image'
-const LandingPresentation = () => {
+const Presentation = () => {
 
   return (
     <section className='w-full'>
-        <h2 className='sr-only'>Landing presentation</h2>
+        <h2 className='sr-only'>Presentation</h2>
         <div className='w-full bg-inherit rounded-lg overflow-clip relative mt-28 flex'>
             <div className='w-1/2 flex flex-col  justify-center gap-8'>
                 <p className='text text-5xl font-bold uppercase'>Bringing you the <span className='text-primary-brown-mid'>best</span> audio gear</p>
@@ -27,4 +27,4 @@ const LandingPresentation = () => {
   )
 }
 
-export default LandingPresentation
+export default Presentation

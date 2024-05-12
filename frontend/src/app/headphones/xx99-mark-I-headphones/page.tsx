@@ -6,7 +6,8 @@ import { Button1 } from "@/components/Buttons/Buttons";
 import CartQuantityBox from "@/components/CartQuantityBox/CartQuantityBox";
 import { markIdata } from "../headphonesData";
 import ProductSection from "@/components/ProductSection/ProductSection";
-import LandingPresentation from "@/components/LandingPresentation/LandingPresentation";
+import Presentation from "@/components/Presentation/Presentation";
+
 
 const page = () => {
   return (
@@ -102,7 +103,7 @@ const page = () => {
         </section>
             
         <ProductSection />
-        <LandingPresentation />
+        <Presentation />
 
       </main>
     </>

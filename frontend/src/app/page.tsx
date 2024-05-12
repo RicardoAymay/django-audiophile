@@ -1,6 +1,6 @@
 import FeaturedProducts from "@/components/FeaturedProducts/FeaturedProducts";
 import { Header } from "@/components/Header/Header";
-import LandingPresentation from "@/components/LandingPresentation/LandingPresentation";
+import Presentation from "@/components/Presentation/Presentation";
 import ProductSection from "@/components/ProductSection/ProductSection";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
         <main className="w-[1110px] mx-auto mt-0">
           <ProductSection /> {/* ver as formas ativas e rovers. Ordem corrigida. */}
           <FeaturedProducts /> {/* ver as formas ativas e rovers  */}
-          <LandingPresentation />
+          <Presentation />
         </main>
     </>
   );

@@ -1,9 +1,10 @@
 import { PagesHeader } from "@/components/Header/Header";
 import yx1 from "../../../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 import { Button1 } from "@/components/Buttons/Buttons";
-import LandingPresentation from "@/components/LandingPresentation/LandingPresentation";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import Image from "next/image";
+import Presentation from "@/components/Presentation/Presentation";
+
 
 const Speakers = () => {
 
@@ -68,7 +69,7 @@ const Speakers = () => {
         )
         ))}
         <ProductSection />
-        <LandingPresentation />
+        <Presentation  />
       </main>
     </>
   );

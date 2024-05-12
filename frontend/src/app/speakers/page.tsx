@@ -3,8 +3,8 @@ import zx9 from "../../../assets/product-zx9-speaker/desktop/image-category-page
 import zx7 from "../../../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import Image from "next/image";
 import { Button1 } from "@/components/Buttons/Buttons";
-import LandingPresentation from "@/components/LandingPresentation/LandingPresentation";
 import ProductSection from "@/components/ProductSection/ProductSection";
+import Presentation from "@/components/Presentation/Presentation";
 
 const Speakers = () => {
 
@@ -73,7 +73,7 @@ const zx7Data = {
         )
         ))}
         <ProductSection />
-        <LandingPresentation />
+        <Presentation />
       </main>
     </>
   );

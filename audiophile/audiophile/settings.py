@@ -91,7 +91,7 @@ DATABASES = {
         },
     }
 }
-print(DATABASES)
+
 
 
 # Password validation

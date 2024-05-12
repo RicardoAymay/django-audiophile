@@ -1,0 +1,28 @@
+# Node modules
+node_modules
+
+# Next.js build output
+.next
+
+# Development logs
+*.log
+
+# Development directories
+coverage
+.out
+
+# System files
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+
+# Version control
+.git
+.gitignore
+
+# Editors
+.vscode
+.idea
+*.swp
+*.swo

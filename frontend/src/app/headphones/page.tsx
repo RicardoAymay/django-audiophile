@@ -4,8 +4,9 @@ import markII from "../../../assets/product-xx99-mark-two-headphones/desktop/ima
 import x59 from "../../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
 import Image from "next/image";
 import { Button1 } from "@/components/Buttons/Buttons";
-import LandingPresentation from "@/components/LandingPresentation/LandingPresentation";
 import ProductSection from "@/components/ProductSection/ProductSection";
+import Presentation from "@/components/Presentation/Presentation";
+
 
 const Headphones = () => {
   const markIdata = {
@@ -83,7 +84,7 @@ const Headphones = () => {
         )
         ))}
         <ProductSection />
-        <LandingPresentation />
+        <Presentation />
       </main>
     </>
   );

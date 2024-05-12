@@ -10,7 +10,7 @@ class Users(models.Model):
 
 
 class Address(models.Model):
-    id = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True, unique=True)
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
     address = models.CharField(max_length=255)
     city = models.CharField(max_length=100)
@@ -20,10 +20,10 @@ class Address(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
-class Products(models.Model):
-    id = models.AutoField(primary_key=True) 
-    name = models.CharField(max_length=100)
+class Products(models.Model): 
+    name = models.CharField(max_length=100, primary_key=True, unique=True)
     description = models.TextField()
+    stock = models.IntegerField(default=0)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
