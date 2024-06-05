@@ -20,5 +20,6 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/next-app
+    working_dir: /next-app
+    command: npm run dev
     restart: unless-stopped
-

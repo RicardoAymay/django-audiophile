@@ -1,20 +1,16 @@
-FROM node:20.13-alpine
+FROM node:22-alpine3.19
 
-WORKDIR /app-next
+WORKDIR /next-app
 
-# Install dependencies based on the preferred package manager
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
-RUN \
+RUN corepack enable && \
   if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
   elif [ -f package-lock.json ]; then npm ci; \
-  elif [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm i; \
-  # Allow install without lockfile, so example works even without Node.js installed locally
+  elif [ -f pnpm-lock.yaml ]; then pnpm install; \
   else echo "Warning: Lockfile not found. It is recommended to commit lockfiles to version control." && yarn install; \
   fi
-
-  COPY . .
-
-# ENV NEXT_TELEMETRY_DISABLED 1
+RUN npm install -g next react-hook-form @hookform/resolvers zod
+COPY . .
 
 CMD \
   if [ -f yarn.lock ]; then yarn dev; \
