@@ -1,5 +1,6 @@
 import Image from "next/image";
 import arrow from "../../../assets/shared/desktop/icon-arrow-right.svg";
+import Link from "next/link";
 
 
 interface iButton2Props {
@@ -36,13 +37,17 @@ export const Button2 = ( { black }: iButton2Props ) => {
  }
 };
 
-export const Button3 = () => {
+type Button3Props = {
+  href: string;
+};
+
+export const Button3 = ({href}: Button3Props) => {
 
   return (
-    <button className="bg-inherit w-20 flex font-bold items-center justify-center overflow-hidden">
+    <Link href={href} className="bg-inherit w-20 flex font-bold items-center justify-center overflow-hidden">
       <p className="text-primary-audio-dark opacity-50 hover:text-primary-brown-mid hover:opacity-100 transition">SHOP</p>
       <Image src={arrow} alt="arrow" className="relative right-[-15px]"/>
-    </button>
+    </Link>
   );
 };
 

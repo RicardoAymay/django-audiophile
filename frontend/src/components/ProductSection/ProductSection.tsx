@@ -8,9 +8,10 @@ interface ProductProps {
   src: StaticImageData;
   alt: string;
   title: string;
+  href: string;
 }
 
-const Product = ({ src, alt, title }: ProductProps) => {
+const Product = ({ src, alt, title, href }: ProductProps) => {
   return (
     <div className="w-3/12 flex flex-col min-w-80 h-52 bg-primary-audio-light mt-36 rounded-lg">
 
@@ -22,7 +23,7 @@ const Product = ({ src, alt, title }: ProductProps) => {
         <h3 className="uppercase tracking-widest font-extrabold text-lg mb-6">
           {title}
         </h3>
-        <Button3 />
+        <Button3 href={href}/>
       </div>
 
     </div>
@@ -37,16 +38,19 @@ const ProductSection = () => {
         src={thumbHead}
         alt="Go to the headphones section"
         title="Headphones"
+        href="/headphones"
       />
         <Product
           src={thumbSpeaker}
           alt="Go to the speakers section"
           title="Speakers"
+          href="/speakers"
         />
       <Product
         src={thumbEar}
         alt="Go to the earphones section"
         title="Earphones"
+        href="/earphones"
       />
     </section>
   );
