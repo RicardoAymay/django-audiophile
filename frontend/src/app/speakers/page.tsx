@@ -12,11 +12,13 @@ const Speakers = () => {
     title: "ZX9 SPEAKER",
     description: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
     image: zx9,
+    href: "/speakers/zx9-speaker",
 };
 const zx7Data = {
     title: "ZX7 SPEAKER",
     description: "Stream high quality sound wirelessly with minimal loss. The ZX7 speaker offers a truly full range audio experience. Connect to any device with a 3.5mm port.",
     image: zx7,
+    href: "/speakers/zx7-speaker",
 };
   const speakers = [zx9Data, zx7Data];
 
@@ -47,7 +49,7 @@ const zx7Data = {
                   {speakers.title}
                 </h2>
                 <p className="opacity-55 w-5/6">{speakers.description}</p>
-                <Button1 />
+                <Button1 href={speakers.href} />
               </div>
             </div>
 
@@ -66,7 +68,7 @@ const zx7Data = {
                   {speakers.title}
                 </h2>
                 <p className="opacity-55">{speakers.description}</p>
-                <Button1 />
+                <Button1 href={speakers.href}/>
               </div>
             </div>
           </div>

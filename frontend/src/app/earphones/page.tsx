@@ -12,6 +12,7 @@ const Speakers = () => {
     title: "YX1 WIRELESS EARPHONES",
     description: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Discover ultimate sound that adapts to you.",
     image: yx1,
+    href: "/earphones/yx1-wireless-earphones",
 };
 
   const earphones = [zx9Data];
@@ -43,7 +44,7 @@ const Speakers = () => {
                   {earphones.title}
                 </h2>
                 <p className="opacity-55 w-5/6">{earphones.description}</p>
-                <Button1 />
+                <Button1 href={earphones.href} />
               </div>
             </div>
 
@@ -62,7 +63,7 @@ const Speakers = () => {
                   {earphones.title}
                 </h2>
                 <p className="opacity-55">{earphones.description}</p>
-                <Button1 />
+                <Button1 href={earphones.href} />
               </div>
             </div>
           </div>

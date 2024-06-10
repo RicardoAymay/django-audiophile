@@ -4,12 +4,20 @@ import Link from "next/link";
 
 
 interface iButton2Props {
+  href: string;
   black?: boolean;
 }
 
 interface iButton1Props {
+  href: string;
   cart?: boolean;
 }
+
+type Button3Props = {
+  href: string;
+};
+
+
 export const Button1 = ({cart}: iButton1Props) => {
   return (
   <button className="border border-primary-brown-mid font-semibold bg-primary-brown-mid text-white h-12 tracking-wider px-5 hover:bg-primary-beige hover:border-primary-beige transition w-40">
@@ -19,27 +27,23 @@ export const Button1 = ({cart}: iButton1Props) => {
 }
 
 
-
-export const Button2 = ( { black }: iButton2Props ) => {
+export const Button2 = ( { black, href }: iButton2Props ) => {
  if(!black){
   return (
-    <button className="border border-black bg-white hover:bg-black hover:text-white transition px-5 font-bold h-12 tracking-wider">
+    <Link href={href} className="border border-black bg-white hover:bg-black hover:text-white transition px-5 font-bold h-12 tracking-wider">
       SEE PRODUCT
-    </button>
+    </Link>
   );
  }
  else{
   return (
-    <button className="border border-black bg-black text-white hover:bg-white hover:text-black transition p-5 font-bold h-12 tracking-wider flex items-center">
+    <Link href={href} className="border border-black bg-black text-white hover:bg-white hover:text-black transition p-5 font-bold h-12 tracking-wider flex items-center">
       SEE PRODUCT
-    </button>
+    </Link>
   );
  }
 };
 
-type Button3Props = {
-  href: string;
-};
 
 export const Button3 = ({href}: Button3Props) => {
 
