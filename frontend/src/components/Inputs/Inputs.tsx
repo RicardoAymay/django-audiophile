@@ -3,7 +3,7 @@ type iInputProps = InputHTMLAttributes<HTMLInputElement>
 
 
 
-const Inputs = forwardRef<HTMLInputElement, iInputProps>(({name = '', type = 'text', ...props}, ref) => {
+const Input = forwardRef<HTMLInputElement, iInputProps>(({name = '', type = 'text', ...props}, ref) => {
   return (
     <label htmlFor={name}>
       <input type={type} className="leading-loose border" ref={ref}/>
@@ -12,4 +12,4 @@ const Inputs = forwardRef<HTMLInputElement, iInputProps>(({name = '', type = 'te
 }
 )
 
-export default Inputs
+export default Input
