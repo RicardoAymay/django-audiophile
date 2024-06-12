@@ -8,7 +8,10 @@ import zx9 from "../../../assets/product-zx9-speaker/desktop/image-category-page
 import mIhang from "../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg";
 import mItable from "../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg";
 import mIphone from "../../../assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg";
-import { features } from "process";
+import x59Girl from "../../../assets/product-xx59-headphones/desktop/image-gallery-1.jpg";
+import books from "../../../assets/product-xx59-headphones/desktop/image-gallery-2.jpg";
+import finger from "../../../assets/product-xx59-headphones/desktop/image-gallery-3.jpg";
+
 
 
 export const markIdata = {
@@ -44,8 +47,13 @@ export const x59data = {
     description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
     price: 899,
     image: x59,
-    content: [{"1x": "Headphone Unit"}, {"2x": "Replacement Earcups"}, {"1x": "User Manual"}, {"1x": "3.5mm 5m Audio Cable"}]
-}
+    content: [{"1x": "Headphone Unit"}, {"2x": "Replacement Earcups"}, {"1x": "User Manual"}, {"1x": "3.5mm 5m Audio Cable"}],
+    picGrid: {
+        picGirl: x59Girl,
+        picBooks: books,
+        picFinger: finger
+    }
+  }
 
 export const relatedProductsMarkII = [
   {
@@ -70,6 +78,21 @@ export const relatedProductsMarkI = [
   {
     title: "XX59",
     image: x59,
+  },
+  {
+    title: "ZX9 SPEAKER",
+    image: zx9,
+  },
+];
+
+export const relatedProductsX59 = [
+  {
+    title: "XX99 MARK II",
+    image: markII,
+  },
+  {
+    title: "XX99 MARK I",
+    image: markI,
   },
   {
     title: "ZX9 SPEAKER",

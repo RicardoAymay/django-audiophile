@@ -9,7 +9,7 @@ interface iButton2Props {
 }
 
 interface iButton1Props {
-  href: string;
+  href?: string;
   cart?: boolean;
 }
 
@@ -18,13 +18,17 @@ type Button3Props = {
 };
 
 
-export const Button1 = ({cart}: iButton1Props) => {
-  return (
-  <button className="border border-primary-brown-mid font-semibold bg-primary-brown-mid text-white h-12 tracking-wider px-5 hover:bg-primary-beige hover:border-primary-beige transition w-40">
-      {cart ? "ADD TO CART" : "SEE PRODUCT"}
+export const Button1 = ({ cart, href }: iButton1Props) => {
+  return cart ? (
+    <button className="border flex items-center border-primary-brown-mid font-semibold bg-primary-brown-mid text-white h-12 tracking-wider px-5 hover:bg-primary-beige hover:border-primary-beige transition w-40">
+      ADD TO CART
     </button>
+  ) : (
+    <Link href={href || '#'} className="border flex items-center border-primary-brown-mid font-semibold bg-primary-brown-mid text-white h-12 tracking-wider px-5 hover:bg-primary-beige hover:border-primary-beige transition w-40">
+      SEE PRODUCT
+    </Link>
   );
-}
+};
 
 
 export const Button2 = ( { black, href }: iButton2Props ) => {
