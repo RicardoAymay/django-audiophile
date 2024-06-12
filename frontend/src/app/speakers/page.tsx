@@ -1,23 +1,12 @@
 import { PagesHeader } from "@/components/Header/Header";
-import zx9 from "../../../assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
-import zx7 from "../../../assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import Image from "next/image";
 import { Button1 } from "@/components/Buttons/Buttons";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import Presentation from "@/components/Presentation/Presentation";
+import { zx7Data, zx9Data } from "./speakersData";
 
 const Speakers = () => {
 
-    const zx9Data = {
-    title: "ZX9 SPEAKER",
-    description: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
-    image: zx9,
-};
-const zx7Data = {
-    title: "ZX7 SPEAKER",
-    description: "Stream high quality sound wirelessly with minimal loss. The ZX7 speaker offers a truly full range audio experience. Connect to any device with a 3.5mm port.",
-    image: zx7,
-};
   const speakers = [zx9Data, zx7Data];
 
   return (
@@ -47,7 +36,7 @@ const zx7Data = {
                   {speakers.title}
                 </h2>
                 <p className="opacity-55 w-5/6">{speakers.description}</p>
-                <Button1 />
+                <Button1 href={speakers.href} />
               </div>
             </div>
 
@@ -66,7 +55,7 @@ const zx7Data = {
                   {speakers.title}
                 </h2>
                 <p className="opacity-55">{speakers.description}</p>
-                <Button1 />
+                <Button1 href={speakers.href}/>
               </div>
             </div>
           </div>

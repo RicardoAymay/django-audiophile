@@ -20,11 +20,11 @@ const FeaturedProducts = () => {
             <div className="w-3/4 flex flex-col items-start justify-center space-y-5 translate-x-14 absolute z-30">
               <h3 className="text-white text-6xl tracking-wide uppercase font-bold w-1/2">ZX9 Speaker</h3>
               <p className="text-white w-full">Upgrade to premium speakers that are <br></br> phenomenally built to deliver truly remarkable <br></br> sound.</p>
-              <Button2 black/>
+              <Button2 href="/speakers/zx9-speaker" black/>
             </div>
           </div>
         </div>
-
+  
 
         <figure className="relative w-fit bg-[#979797] border flex mt-14 rounded-lg overflow-hidden">
           <div className="absolute w-1/3 h-full flex flex-col ms-24 justify-center gap-10">
