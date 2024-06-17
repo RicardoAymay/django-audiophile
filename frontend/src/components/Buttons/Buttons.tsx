@@ -59,11 +59,11 @@ export const Button3 = ({href}: Button3Props) => {
   );
 };
 
-export const ButtonInherit = () => {
+export const ButtonInherit = ({href}: Button3Props) => {
   return (
-    <button className="border bg-inherit w-[168px] border-black hover:bg-black hover:text-white transition px-5 font-bold h-12 tracking-wider">
+    <Link href={href} className="border  flex items-center bg-inherit w-[168px] border-black hover:bg-black hover:text-white transition px-5 font-bold h-12 tracking-wider">
       SEE PRODUCT
-    </button>
+    </Link>
   );
 }
 

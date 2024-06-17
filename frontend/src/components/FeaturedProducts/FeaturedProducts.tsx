@@ -29,7 +29,7 @@ const FeaturedProducts = () => {
         <figure className="relative w-fit bg-[#979797] border flex mt-14 rounded-lg overflow-hidden">
           <div className="absolute w-1/3 h-full flex flex-col ms-24 justify-center gap-10">
             <p className="text-3xl tracking-wider font-bold">ZX7 SPEAKER</p>
-            <ButtonInherit/>
+            <ButtonInherit href="/speakers/zx7-speaker"/>
           </div>
             <Image src={zx7} alt="ZX7 Speaker" />
         </figure>
@@ -41,7 +41,7 @@ const FeaturedProducts = () => {
           </figure>
             <div className=" flex flex-col flex-1 rounded-lg bg-primary-audio-lightest ms-10 justify-center ps-16 gap-8">
               <p className="text-3xl font-bold">YX1 EARPHONES</p> 
-              <ButtonInherit />
+              <ButtonInherit href="earphones/yx1-wireless-earphones"/>
              
             </div>
             
