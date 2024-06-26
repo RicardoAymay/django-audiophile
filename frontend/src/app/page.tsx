@@ -1,5 +1,5 @@
 import FeaturedProducts from "@/components/FeaturedProducts/FeaturedProducts";
-import { Header } from "@/components/Header/Header";
+import { Header } from "@/components/Headers/Header";
 import Presentation from "@/components/Presentation/Presentation";
 import ProductSection from "@/components/ProductSection/ProductSection";
 

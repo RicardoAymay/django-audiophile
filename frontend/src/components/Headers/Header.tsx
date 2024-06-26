@@ -1,10 +1,11 @@
 import Image from "next/image";
-import cart from "../../../assets/shared/desktop/icon-cart.svg";
+import cartIcon from "../../../assets/shared/desktop/icon-cart.svg";
 
 import { Button1 } from "@/components/Buttons/Buttons";
 import mark2headphones from "../../../assets/home/desktop/image-hero.jpg";
 import logo from "../../../assets/shared/desktop/logo.svg";
 import { Navbar, NavbarPages } from "../Navbar/Navbar";
+
 
 export const Header = () => {
   return (
@@ -15,7 +16,7 @@ export const Header = () => {
             <Image src={logo} alt="audiophile" />
           </h1>
           <Navbar />
-          <Image src={cart} alt="Access your cart" />
+          <Image src={cartIcon} alt="Access your cart" />
         </div>
         
         <div className="w-full h-auto min-h-40 flex items-center">
@@ -30,7 +31,7 @@ export const Header = () => {
               Experience natural, lifelike audio and exceptional <br></br> build quality
               made for the passionate music <br></br> enthusiast.
             </p>
-            <Button1 />
+            <Button1 href="/headphones/xx99-mark-II-headphones"/>
           </div>
 
           <div className="flex flex-1">
@@ -44,6 +45,8 @@ export const Header = () => {
     </header>
   )
 }
+
+
 interface iPagesHeaderProps {
   bigtitle?: string
 }
@@ -57,7 +60,9 @@ export const PagesHeader = ({bigtitle}: iPagesHeaderProps ) => {
             <Image src={logo} alt="audiophile" />
           </h1>
           <NavbarPages />
-          <Image src={cart} alt="Access your cart" />
+          <button>
+            <Image src={cartIcon} alt="Access your cart" />
+          </button>
         </div>
       </header>
     )
@@ -70,7 +75,7 @@ export const PagesHeader = ({bigtitle}: iPagesHeaderProps ) => {
           <Image src={logo} alt="audiophile" />
         </h1>
         <NavbarPages />
-        <Image src={cart} alt="Access your cart" />
+        <Image src={cartIcon} alt="Access your cart" />
       </div>
       
         <div className="w-full max-h-full flex items-center justify-center h-full">

@@ -1,4 +1,4 @@
-import { PagesHeader } from "@/components/Header/Header";
+import { PagesHeader } from "@/components/Headers/Header";
 import React from "react";
 import Image from "next/image";
 import { Button1 } from "@/components/Buttons/Buttons";

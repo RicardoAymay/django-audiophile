@@ -21,9 +21,9 @@ export const markIdata = {
   image: markI,
   content: [{"1x": "Headphone Unit"}, {"2x": "Replacement Earcups"}, {"1x": "User Manual"}, {"1x": "3.5mm 5m Audio Cable"}],
   picGrid: {
-    picmIhang: mIhang,
-    picmItable: mItable,
-    picmIphone: mIphone
+    pic1: mIhang,
+    pic2: mItable,
+    pic3: mIphone
   }
 }
 
@@ -34,13 +34,11 @@ export const markIIdata = {
     image: markII,
     content : [{"1x": "Headphone Unit"}, {"2x": "Replacement Earcups"}, {"1x": "User Manual"}, {"1x": "3.5mm 5m Audio Cable"}, {"1x": "Travel Bag"}],
     picGrid: {
-        picPhoneGuy: phoneGuy,
-        picPhoneTable: phoneTable,
-        picPhonePicture: phonePicture
+      pic1: phoneGuy,
+      pic2: phoneTable,
+      pic3: phonePicture
     }
 }
-
-
 
 export const x59data = {
     title: "XX59 HEADPHONES",
@@ -49,9 +47,9 @@ export const x59data = {
     image: x59,
     content: [{"1x": "Headphone Unit"}, {"2x": "Replacement Earcups"}, {"1x": "User Manual"}, {"1x": "3.5mm 5m Audio Cable"}],
     picGrid: {
-        picGirl: x59Girl,
-        picBooks: books,
-        picFinger: finger
+      pic1: x59Girl,
+      pic2: books,
+      pic3: finger
     }
   }
 
@@ -102,7 +100,7 @@ export const relatedProductsX59 = [
 
 export const productsFeatures = {
     markII: {
-        feaures1: "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
+        features1: "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
         features2: "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones are the ultimate in sound and comfort."
     },
     markI: {
@@ -110,9 +108,13 @@ export const productsFeatures = {
         features2: "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector."
           },
     x59: {
-        feaures1: "The earcups are ergonomically designed to be ultra-comfortable and breathable. The lightweight construction means you can enjoy your music for hours. XX59 headphones ensure that you stay comfortable during long listening sessions.",
+        features1: "The earcups are ergonomically designed to be ultra-comfortable and breathable. The lightweight construction means you can enjoy your music for hours. XX59 headphones ensure that you stay comfortable during long listening sessions.",
         features2: "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5.0 compliant connectivity and 20-hour battery life, the XX59 headphones are the perfect tool for listening."
     }
 }
 
-export const headphonesData = [markIIdata, markIdata, x59data]
+export const headphonesData = {
+  markI: markIdata,
+  markII: markIIdata,
+  x59: x59data
+}

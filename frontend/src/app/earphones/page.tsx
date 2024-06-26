@@ -1,4 +1,4 @@
-import { PagesHeader } from "@/components/Header/Header";
+import { PagesHeader } from "@/components/Headers/Header";
 import yx1 from "../../../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 import { Button1 } from "@/components/Buttons/Buttons";
 import ProductSection from "@/components/ProductSection/ProductSection";

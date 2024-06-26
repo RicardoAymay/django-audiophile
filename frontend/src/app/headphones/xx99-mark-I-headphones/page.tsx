@@ -1,4 +1,4 @@
-import { PagesHeader } from "@/components/Header/Header";
+import { PagesHeader } from "@/components/Headers/Header";
 import React from "react";
 import { headphonesData, productsFeatures, relatedProductsMarkI, relatedProductsMarkII } from "../headphonesData";
 import Image from "next/image";

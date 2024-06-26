@@ -1,4 +1,4 @@
-import { PagesHeader } from "@/components/Header/Header";
+import { PagesHeader } from "@/components/Headers/Header";
 import markI from "../../../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import markII from "../../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg";
 import x59 from "../../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
