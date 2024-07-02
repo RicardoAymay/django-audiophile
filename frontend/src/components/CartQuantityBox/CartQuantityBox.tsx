@@ -2,18 +2,14 @@
 
 import { useState } from "react";
 
-const CartQuantityBox = () => {
-    let [quantity, setQuantity] = useState(1);
-    let increment = () => {
-        quantity+=1
-        setQuantity(quantity);
-    }
-    let decrement = () => {
-        if(quantity > 1) {
-            quantity-=1
-            setQuantity(quantity);
-        }
-    }
+interface CartQuantityBoxProps {
+    quantity: number;
+    increment: () => void;
+    decrement: () => void;
+  }
+
+const CartQuantityBox = ({quantity, increment, decrement}: CartQuantityBoxProps) => {
+
   return (
     <div>
         <div className="flex items-center w-[120px] h-12 bg-primary-audio-light">

@@ -7,8 +7,11 @@ import CartQuantityBox from "@/components/CartQuantityBox/CartQuantityBox";
 import ProductSection from "@/components/ProductSection/ProductSection";
 import Presentation from "@/components/Presentation/Presentation";
 import { ButtonAddtoCart } from "@/components/Buttons/CartButtons";
+import { title } from "process";
+import { CartProducts } from "@/contexts/cartContext";
+import UpperSection from "./UpperSection";
 
-interface ProductTypeData {
+export interface ProductTypeData {
   title: string;
   description: string;
   image: StaticImageData;
@@ -35,6 +38,7 @@ type ProductPageProps = {
   productsFeatures: ProductsFeatures;
   relatedProducts: RelatedProducts[];
   productKey: string;
+  productData: CartProducts;
 }
 
 interface RelatedProducts {
@@ -42,49 +46,18 @@ interface RelatedProducts {
   image: StaticImageData;
 }
 
-const ProductPage = ({productTypeData, productsFeatures, relatedProducts, productKey}: ProductPageProps) => {
+const ProductPage = ({productTypeData, productsFeatures, relatedProducts, productKey, productData}: ProductPageProps) => {
   return (
     <>
       <PagesHeader />
       <main className="min-h-screen w-[1110px] mx-auto">
-        <section className="flex w-full items-center max-auto mt-24">
-          <div className="flex items-center justify-center w-1/2">
-            <figure>
-              <Image src={productTypeData.image} alt="Headphones" />
-            </figure>
-          </div>
-          <div className="flex flex-col items-center justify-between w-1/2">
-            <div className="h-auto flex flex-col gap-y-5 w-5/6">
-              <p className="text-primary-brown-mid opacity-70 tracking-[.45em]">
-                NEW PRODUCT
-              </p>
-              <h2 className="text-5xl font-bold uppercase">
-                {productTypeData.title}
-              </h2>
-              <p className="opacity-55 w-full">
-                {productTypeData.description}
-              </p>
-              <p className="font-bold my-6">
-                {new Intl.NumberFormat("en-US", {
-                  style: "currency",
-                  currency: "USD",
-                }).format(productTypeData.price)}
-              </p>
-              <div className="flex gap-5">
-                <CartQuantityBox />
-                <ButtonAddtoCart />
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        
+        <UpperSection productTypeData={productTypeData}/>        
         <section className=" mt-20 grid grid-cols-[60%_40%]">
           <div className="w-full">
             <h3 className="text-3xl font-bold pb-10">FEATURES</h3>
             <article>
-              <p>{productsFeatures.productKey.features1}</p>
-              <p className="mt-14">{productsFeatures.productKey.features2}</p>
+              <p>{productsFeatures[productKey].features1}</p>
+              <p className="mt-14">{productsFeatures[productKey].features2}</p>
             </article>
           </div>
 
@@ -144,3 +117,4 @@ const ProductPage = ({productTypeData, productsFeatures, relatedProducts, produc
 }
 
 export default ProductPage
+

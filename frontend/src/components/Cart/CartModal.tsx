@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import React from 'react'
 import { ButtonCheckout } from '../Buttons/Buttons'
+import { useCartContext } from '@/contexts/cartContext'
+
 type CartModalProps = {
   productQuantity: number,
   cartItems: ItemProps[]
@@ -15,8 +17,14 @@ type ItemProps = {
 }
 
 
-const CartModal = ({productQuantity, cartItems}: CartModalProps) => {
-  const totalPrice = cartItems.reduce((acc, item) => {
+const CartModal = ({productQuantity }: CartModalProps) => {
+  const { cart, setCart } = useCartContext();
+
+  const handleRemoveAll = () => {
+    setCart([]);
+  }
+
+  const totalPrice = cart.reduce((acc, item) => {
     return acc + item.price * item.quantity
   }, 0)
   return (
@@ -25,11 +33,11 @@ const CartModal = ({productQuantity, cartItems}: CartModalProps) => {
 
       <div className='w-full'>
         <p>Cart {productQuantity}</p>
-        <button>Remove all</button>
+        <button onClick={handleRemoveAll}>Remove all</button>
       </div>
 
       <div>
-        {cartItems.map((item: ItemProps) => {
+        {cart.map((item: ItemProps) => {
           return (
             <div key={item.id} className='flex'>
               <figure>
