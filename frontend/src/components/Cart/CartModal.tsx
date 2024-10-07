@@ -1,5 +1,5 @@
 "use client;"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 import { ButtonCheckout } from '../Buttons/Buttons'
 import { useCartContext } from '@/contexts/cartContext'
@@ -10,9 +10,9 @@ type CartModalProps = {
 }
 type ItemProps = {
   id: number,
-  image: string
-  name: string
-  price: number
+  image: StaticImageData,
+  name: string,
+  price: number,
   quantity: number
 }
 

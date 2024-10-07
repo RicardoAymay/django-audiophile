@@ -7,6 +7,7 @@ interface contextInterface {
 }
 
 export interface CartProducts {
+    id: number
     name: string;
     price: number;
     image: StaticImageData;

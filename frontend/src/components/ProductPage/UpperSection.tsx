@@ -10,23 +10,24 @@ interface UpperSectionProps {
 productTypeData: ProductTypeData;
 }    
 
-let [quantity, setQuantity] = useState(1);
-let increment = () => {
-    quantity+=1
-    setQuantity(quantity);
-}
-let decrement = () => {
-    if(quantity > 1) {
-        quantity-=1
+const UpperSection = ({productTypeData}: UpperSectionProps) => {
+    let [quantity, setQuantity] = useState(1);
+    let increment = () => {
+        quantity+=1
         setQuantity(quantity);
     }
-}
 
-const addToCart = () => {
-    console.log(`Added ${quantity} items to the cart.`);
-  };
+    let decrement = () => {
+        if(quantity > 1) {
+            quantity-=1
+            setQuantity(quantity);
+        }
+    }
 
-const UpperSection = ({productTypeData}: UpperSectionProps) => {
+    const addToCart = () => { 
+        console.log(`Added ${quantity} items to the cart.`);
+      };
+
     return (
         <section className="flex w-full items-center max-auto mt-24">
             <div className="flex items-center justify-center w-1/2">
